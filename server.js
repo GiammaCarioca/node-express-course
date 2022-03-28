@@ -5,6 +5,10 @@ const mockUserData = [{ name: 'Mark' }, { name: 'Jill' }]
 
 app.use(express.json())
 
+app.get('/', (req, res) => {
+  res.send('Hello world')
+})
+
 app.get('/users', (req, res) => {
   res.json({
     success: true,
